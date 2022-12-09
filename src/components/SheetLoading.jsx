@@ -41,7 +41,7 @@ const SheetLoading = (props) => {
       <img
         src={logoLojinha}
         style={{ height: "20vmin" }}
-        alt="Origem Shop"
+        alt="Mobi Eletronicos"
       />
 
       {error ? (
