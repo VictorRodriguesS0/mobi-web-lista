@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.updated-list-date {
+  font-size: calc(9px + 1vmin);
+  vertical-align: center;
+}
+
+.category-menu {
+  transition: 200ms;
+}
+
+.category-menu:hover {
+  transition: 200ms;
+}
+
+.category-menu i {
+  transition: 200ms;
+  opacity: 0;
+}
+
+.category-menu:hover i {
+  transition: 100ms;
+  opacity: 1;
+  margin-left: 20px;
+}
+
+.custom-button {
+  transition: 200ms;
+  background-color: transparent;
+  border: transparent;
+  padding: 0;
+}
+
+.custom-button:focus {
+  outline: 0;
+}
+
+.btn-darken:hover {
+  transition: 200ms;
+  filter: brightness(85%);
+}
+
+.btn-lighten:hover {
+  transition: 200ms;
+  filter: brightness(125%);
+}
+
+.product-list-item {
+  transition: 200ms;
+  background-color: #000000;
+  cursor: pointer;
+}
+
+.product-list-item:hover {
+  transition: 200ms;
+  background-color: #303030;
+}
+
+.backgroundDebug {
+  background-color: red;
+}
+
+.zoom-hover {
+  transition: 200ms;
+  transform: scale(1);
+}
+
+.zoom-hover:hover {
+  transition: 200ms;
+  transform: scale(1.1);
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+.floating-shadow {
+  -webkit-box-shadow: 6px 10px 14px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 6px 10px 14px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 6px 10px 14px 0px rgba(0, 0, 0, 0.5);
+}
+
+.parcelamento-input {
+  border: none;
+  color: white;
+}
+
+.parcelamento-input:focus-visible {
+  outline: none;
+}
