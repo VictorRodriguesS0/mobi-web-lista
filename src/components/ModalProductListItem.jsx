@@ -12,7 +12,7 @@ class ModalProductListItem extends Component {
   state = {};
 
   render() {
-    const { product, modalToggle, onClickParcelamento } = this.props;
+    const { product, modalToggle } = this.props;
     return (
       <>
         <BrowserView renderWithFragment>
@@ -160,13 +160,13 @@ class ModalProductListItem extends Component {
 
 ModalProductListItem.defaultProps = {
   modalToggle: () => {},
-  onClickParcelamento: () => {},
+  // onClickParcelamento: () => {},
 };
 
 ModalProductListItem.propTypes = {
   product: PropTypes.objectOf(PropTypes.any).isRequired,
   modalToggle: PropTypes.func,
-  onClickParcelamento: PropTypes.func,
+  // onClickParcelamento: PropTypes.func,
 };
 
 export default ModalProductListItem;
