@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import { isMobile } from 'react-device-detect';
-import { connectWithStore } from '../store';
-import GalleryCardItem from './GalleryCardItem';
-import { colors } from '../styles/colors';
-import SortSelector from './SortSelector';
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import { isMobile } from "react-device-detect";
+import { connectWithStore } from "../store";
+import GalleryCardItem from "./GalleryCardItem";
+import { colors } from "../styles/colors";
+import SortSelector from "./SortSelector";
 
-const PAGE_LENGTH = 10;
+const PAGE_LENGTH = 1000;
 
 const GalleryView = (props) => {
   const { sectionFilteredList } = props;
@@ -57,7 +57,9 @@ const GalleryView = (props) => {
 
   const appendProducts = () => {
     // Função do botão de ver mais que adiciona a próxima página à lista que está sendo exibida
-    const newList = showingProductsList.concat([...fullPaginatedList[page + 1]]);
+    const newList = showingProductsList.concat([
+      ...fullPaginatedList[page + 1],
+    ]);
     setShowingProductsList(newList);
     setPage(page + 1);
   };
@@ -71,7 +73,7 @@ const GalleryView = (props) => {
           className="custom-button btn-darken btn-block my-3"
           style={{
             backgroundColor: colors.roxoEscuro,
-            color: 'white',
+            color: "white",
             padding: 5,
             borderRadius: 10,
           }}
@@ -97,16 +99,15 @@ const GalleryView = (props) => {
             setPage(0);
           }}
         />
-        {showingProductsList
-          .map((product) => (
-            <GalleryCardItem
-              style={{
-                width: '100%',
-              }}
-              product={product}
-              key={product.id}
-            />
-          ))}
+        {showingProductsList.map((product) => (
+          <GalleryCardItem
+            style={{
+              width: "100%",
+            }}
+            product={product}
+            key={product.id}
+          />
+        ))}
         {loadMoreItemsButton()}
       </div>
     );
