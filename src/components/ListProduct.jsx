@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connectWithStore } from "../store";
 import { colors } from "../styles/colors";
 import GalleryView from "./GalleryView";
-import ListView from "./ListView";
+// import ListView from "./ListView";
 
 import iconGallery from "../assets/icons/galeria.png";
 
